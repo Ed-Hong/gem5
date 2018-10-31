@@ -119,6 +119,12 @@ BPredUnit::regStats()
         .precision(6);
     BTBHitPct = (BTBHits / BTBLookups) * 100;
 
+     BTBMissPct
+         .name(name() + ".BTBMissPct")
+         .desc("BTB Miss Percentage")
+         .precision(6);
+     BTBMissPct =(1-(BTBHits / BTBLookups)) * 100;
+
     usedRAS
         .name(name() + ".usedRAS")
         .desc("Number of times the RAS was used to get a target.")

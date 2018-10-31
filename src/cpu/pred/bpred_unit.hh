@@ -289,11 +289,12 @@ class BPredUnit : public SimObject
     Stats::Scalar BTBCorrect;
     /** Stat for percent times an entry in BTB found. */
     Stats::Formula BTBHitPct;
+    /** Stat for percent times an entry in BTB is NOT found. */
+    Stats::Formula BTBMissPct;
     /** Stat for number of times the RAS is used to get a target. */
     Stats::Scalar usedRAS;
     /** Stat for number of times the RAS is incorrect. */
     Stats::Scalar RASIncorrect;
-
     /** Stat for the number of indirect target lookups.*/
     Stats::Scalar indirectLookups;
     /** Stat for the number of indirect target hits.*/
