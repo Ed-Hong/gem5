@@ -50,4 +50,4 @@ class BaseSimpleCPU(BaseCPU):
             print("ERROR: Checker only supported under ARM ISA!")
             exit(1)
 
-    branchPred = Param.BranchPredictor(BiModeBP(), "Branch Predictor")
+    branchPred = Param.BranchPredictor(TournamentBP(), "Branch Predictor")
